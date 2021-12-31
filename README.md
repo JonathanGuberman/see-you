@@ -39,9 +39,17 @@ This repository also includes a plugin for [Oh My Zsh](https://ohmyz.sh/). It ca
 
 ### Installation
 
-Clone the repository to your `$ZSH_CUSTOM/plugins/`
-directory and add `see-you` to the list of plugins in your `.zshrc` file to have the message
-automatically shown when exiting the shell.
+Clone the repository in to your `$ZSH_CUSTOM/plugins/`
+directory:
+
+```shell
+git clone https://github.com/JonathanGuberman/see-you.git ${ZSH_CUSTOM}/plugins/see-you
+```
+
+Then, add `see-you` to the list of plugins in your `.zshrc` file 
+to have the message automatically shown when exiting the shell. 
+You may also want to add environment variables as described below
+to configure the script's behaviour.
 
 ### Configuration
 You can configure the behaviour of the plugin using environment variables, which you can also set in
@@ -78,7 +86,9 @@ feel free to file an issue or make a pull request.
 
 ## Future development
 
-To be honest, this is probably as far as this project goes. In the off chance that I decide to take it further, here are some improvements I'd like to make:
+To be honest, this is probably as far as this project goes. 
+On the off chance that I decide to take it further, 
+here are some improvements I'd like to make:
 
 * Proper argument parsing to allow non-positional arguments and a proper flag for disabling colour
 * Taking a list of salutations as an argument, from which one would be randomly selected
