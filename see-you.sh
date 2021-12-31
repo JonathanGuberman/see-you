@@ -1,5 +1,5 @@
 #!/bin/bash
-# USAGE ./see-you.sh [cowboy|cowgirl|cowperson|cowbot|cowpoke|cowhand] [suppress colours]
+# USAGE ./see-you.sh [cowboy|cowgirl|cowperson|cowbot|cowpoke|cowhand|random] [suppress colours]
 #
 # Based on https://gist.github.com/softdetours/87c0d293c9ff233c9078c7d822111db4
 # SEE YOU SPACE COWBOY by KYRA REHN (kyrarehn.com) (July 2014)
@@ -39,7 +39,7 @@ _see_you() {
     printf "${COLOURS[13]}  \"Y8888P\"  888    d88P     888  \"Y8888P\"  8888888888     \n"
 
     local LAST_LINE_OPTIONS=(cowboy cowgirl cowperson cowbot cowpoke cowhand)
-    if [ -z "$SEE_YOU" ]; then
+    if [ -z "$SEE_YOU" ] || [ "$SEE_YOU" == "random" ]; then
         local SEE_YOU=${LAST_LINE_OPTIONS[$(($RANDOM % ${#LAST_LINE_OPTIONS[@]}))]}
     fi
     case $SEE_YOU in
