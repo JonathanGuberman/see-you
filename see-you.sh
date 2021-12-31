@@ -1,7 +1,9 @@
 #!/bin/bash
 # USAGE ./see-you.sh [cowboy|cowgirl|cowperson|cowbot|cowpoke|cowhand] [suppress colours]
 #
-# Displays the message "SEE YOU SPACE COW[suffix]" in (optionally) rainbow block text
+# Based on https://gist.github.com/softdetours/87c0d293c9ff233c9078c7d822111db4
+# SEE YOU SPACE COWBOY by KYRA REHN (kyrarehn.com) (July 2014)
+# Displays a timeless message in your terminal with (optional) cosmic color effects
 #
 # If the first argument isn't specified, it will choose one randomly
 # Put any value for the second argument to suppress rainbow output; leave unset for rainbow colouring
