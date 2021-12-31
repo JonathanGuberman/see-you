@@ -6,20 +6,20 @@
 # Displays a timeless message in your terminal with (optional) cosmic color effects
 #
 # If the first argument isn't specified, it will choose one randomly
-# Put any value for the second argument to suppress rainbow output; leave unset for rainbow colouring
+# Put any value for the second argument to suppress cosmic effects
 
 shopt -s nocasematch
 
 _see_you() {
     local SEE_YOU="$1"
-    local NO_RAINBOW="$2"
+    local NO_COSMIC="$2"
 
     # Set up the colours array and escape sequences
     local RESET="\033[m"
     local ESC_SEQ="\x1b[38;5;"
     # local COLOURS=($ESC_SEQ"160;01m" $ESC_SEQ"196;01m" $ESC_SEQ"202;01m" $ESC_SEQ"208;01m" $ESC_SEQ"214;01m" $ESC_SEQ"220;01m" $ESC_SEQ"226;01m" $ESC_SEQ"190;01m" $ESC_SEQ"154;01m" $ESC_SEQ"118;01m" $ESC_SEQ"046;01m" $ESC_SEQ"047;01m" $ESC_SEQ"048;01m" $ESC_SEQ"049;01m" $ESC_SEQ"051;01m" $ESC_SEQ"039;01m" $ESC_SEQ"027;01m" $ESC_SEQ"021;01m" $ESC_SEQ"021;01m" $ESC_SEQ"057;01m" $ESC_SEQ"093;01m")
     local COLOURS
-    if [ -z "$NO_RAINBOW" ]; then
+    if [ -z "$NO_COSMIC" ]; then
         COLOURS=($ESC_SEQ"160;01m" $ESC_SEQ"196;01m" $ESC_SEQ"202;01m" $ESC_SEQ"208;01m" $ESC_SEQ"214;01m" $ESC_SEQ"220;01m" $ESC_SEQ"226;01m" $ESC_SEQ"190;01m" $ESC_SEQ"154;01m" $ESC_SEQ"118;01m" $ESC_SEQ"046;01m" $ESC_SEQ"047;01m" $ESC_SEQ"048;01m" $ESC_SEQ"049;01m" $ESC_SEQ"051;01m" $ESC_SEQ"039;01m" $ESC_SEQ"027;01m" $ESC_SEQ"021;01m" $ESC_SEQ"021;01m" $ESC_SEQ"057;01m" $ESC_SEQ"093;01m")
     fi
 
